@@ -1,0 +1,45 @@
+body {
+    background-image: url("media/world.png");
+    background-size: cover;
+ }
+h1 {
+    text-align: center;
+    font-family: "Arial", serif;
+}
+.container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    margin-left: 35%;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.card {
+    width: 125px;
+    height: 125px;
+    background-color: plum;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 25px;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+
+}
+p {
+    color: deeppink;
+    font-family: "Arial", serif;
+    font-size: 20px;
+    margin-bottom: -20px;
+}
+.front {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back {
+    z-index: 1;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.card:hover  {
+    transform: rotateY(180deg);
+}
